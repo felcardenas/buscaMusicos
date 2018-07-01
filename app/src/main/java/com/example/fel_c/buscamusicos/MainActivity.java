@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity{
                                     public void run() {
                                         startActivity(intent);
                                     }
-                            }, 3000);
+                            }, 2000);
 
 
 
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity{
 
 
             case 1:
-                Toast.makeText(MainActivity.this, "DATOS CORRECTOS", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Datos correctos... Espere unos segundos", Toast.LENGTH_LONG).show();
                 break;
 
 
@@ -113,13 +113,5 @@ public class MainActivity extends AppCompatActivity{
         }
 
     }
-
-    //Tiempo de espera
-    /*public void esperar(int milisegundos) {
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-
-        }, milisegundos);
-    }*/
 
 }

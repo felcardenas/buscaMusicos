@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">buscaMusicos</string>
+    <string name="registro">REGISTRO</string>
+    <string name="textview">TextView</string>
+
+    <string name="alias">ALIAS</string>
+    <string name="correo">CORREO</string>
+    <string name="fechaNacimiento">FECHA DE NACIMIENTO</string>
+    <string name="formatoFecha">DD/MM/AAAA</string>
+
+
+    <string-array name="genero">
+        <item>HOMBRE</item>
+        <item>MUJER</item>
+        <item>OTRO</item>
+        <item>NO ESPECIFICA</item>
+    </string-array>
+
+    <string-array name="SINO">
+        <item>SI</item>
+        <item>NO</item>
+        <item>NO ESPECIFICA</item>
+    </string-array>
+
+
 </resources>
