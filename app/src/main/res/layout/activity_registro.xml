@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".registro"
     android:orientation="vertical"
     >
+
+
+
+    <TextView
+        android:id="@+id/tvRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:text="@string/registro"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,13 +30,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tvRegistro"
-                        android:layout_width="match_parent"
-                        android:layout_height="40sp"
-                        android:text="@string/registro"
-                        android:textAlignment="center"
-                        android:textSize="30sp" />
+
 
                     <EditText
                         android:inputType="text"
@@ -76,12 +83,12 @@
                                 android:layout_alignParentTop="true"
                                 android:layout_marginEnd="81dp"
                                 android:layout_marginRight="81dp"
-                                android:contentDescription="a"
+                                android:contentDescription="@string/app_name"
                                 android:src="@drawable/ic_edit" />
                         </RelativeLayout>
 
                 <TextView
-                    android:text="GÉNERO"
+                    android:text="@string/género"
                     android:layout_marginTop="50dp"
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
@@ -95,7 +102,7 @@
                 </Spinner>
 
                     <TextView
-                        android:text="INGRESE INSTRUMENTO FAVORITO"
+                        android:text="@string/instrumentoFavorito"
                         android:layout_marginTop="50dp"
                         android:layout_width="match_parent"
                         android:layout_height="20dp" />
@@ -105,12 +112,37 @@
                         android:drawSelectorOnTop="true">
                     </Spinner>
 
+                    <TextView
+                        android:text="@string/ingreseNivel"
+                        android:layout_marginTop="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/nivel">
+                    </Spinner>
+
+                    <TextView
+                        android:text="@string/ingreseEstilo"
+                        android:layout_marginTop="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:drawSelectorOnTop="true"
+                        >
+                    </Spinner>
 
 
 
 
                 <TextView
-                android:text="INGRESE REGION"
+                android:text="@string/ingreseRegion"
                 android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
@@ -122,7 +154,7 @@
                 </Spinner>
 
                 <TextView
-                    android:text="INGRESE COMUNA"
+                    android:text="@string/ingreseComuna"
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
@@ -133,7 +165,7 @@
                 </Spinner>
 
                 <TextView
-                    android:text="¿ESTÁS DISPONIBLE PARA UNIRTE AHORA A UNA BANDA?"
+                    android:text="@string/disponible"
                     android:layout_marginTop="50dp"
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
@@ -142,26 +174,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:drawSelectorOnTop="true"
-                    android:entries="@array/SINO">
+                    android:entries="@array/sino">
                 </Spinner>
+
+
+
+
 
                 <EditText
                         android:inputType="textPassword"
                         android:maxLength="15"
                         android:layout_marginTop="50dp"
-                        android:hint="CLAVE"
+                        android:hint="@string/contraseña"
                         android:layout_width="match_parent"
                         android:layout_height="50dp" />
 
                     <EditText
                         android:inputType="textPassword"
                         android:maxLength="15"
-                        android:hint="REPITA SU CLAVE"
+                        android:hint="@string/repitaContraseña"
                         android:layout_width="match_parent"
                         android:layout_height="50dp" />
 
             <Button
-                android:text="REGISTRARSE"
+                android:text="@string/registrarse"
                 android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp" />
