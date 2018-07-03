@@ -18,6 +18,7 @@ import com.loopj.android.http.*;
 import org.json.JSONArray;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
@@ -82,20 +83,37 @@ public class MainActivity extends AppCompatActivity {
 
                                             if(statusCode==200){
 
-                                                mensaje(1);
+                                                String valido = new String(responseBody);
 
-                                                //SE ABRE PANTALLA DE INICIO
-                                                Handler handler = new Handler();
-                                                final Intent intent = new Intent(MainActivity.this, usuarioInicio.class);
-                                                mensaje(1);
+                                                    switch(valido){
 
-                                                //ESPERA DE 2 SEGUNDOS
-                                                handler.postDelayed(new Runnable() {
-                                                    public void run() {
-                                                        startActivity(intent);
+                                                        case "true":
+
+                                                            mensaje(1);
+
+                                                            //SE ABRE PANTALLA DE INICIO
+                                                            Handler handler = new Handler();
+                                                            final Intent intent = new Intent(MainActivity.this, usuarioInicio.class);
+                                                            mensaje(1);
+
+                                                            //ESPERA DE 2 SEGUNDOS
+                                                            handler.postDelayed(new Runnable() {
+                                                                public void run() {
+                                                                    startActivity(intent);
+                                                                }
+                                                            }, 2000);
+
+                                                            break;
+
+
+                                                        case "claveErronea":
+                                                            Toast.makeText(MainActivity.this, "Clave errónea", Toast.LENGTH_SHORT).show();
+                                                            break;
+
+                                                        case "usuarioNoExiste":
+                                                            Toast.makeText(MainActivity.this, "Usuario no existe", Toast.LENGTH_SHORT).show();
+                                                            break;
                                                     }
-                                                }, 2000);
-
 
                                             }
 
@@ -134,16 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-    //Despliegue de mensajes en pantalla principal
+    //DESPLIEGUE DE MENSAJES PANTALLA LOGIN
     public void mensaje(int valor){
 
         switch(valor){
@@ -170,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Encriptar contraseña
+    //ENCRIPTAR CONTRASEÑA
     public String md5(String s) {
         try {
             // Create MD5 Hash
@@ -189,8 +198,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return "";
     }
-
-
 
 
     //VALIDACIONES
