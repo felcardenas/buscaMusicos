@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".registro"
     android:orientation="vertical"
+    android:background="#DCA759"
     >
 
     <TextView
@@ -18,189 +19,260 @@
         android:textSize="30sp" />
 
 
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-
-
-                    <EditText
-                        android:inputType="text"
-                        android:maxLength="20"
-                        android:id="@+id/etAlias"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/alias"
-                        />
-
-                    <EditText
-                        android:maxLength="40"
-                        android:id="@+id/etCorreo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/correo"
-                        android:inputType="textEmailAddress"
-                        />
-
-                        <TextView
-                            android:id="@+id/tvTituloFechaDeNacimiento"
-                            android:textSize="25sp"
-                            android:layout_marginTop="30dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:text="@string/fechaNacimiento"
-                            android:textAlignment="center"
-                            />
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp">
-
-                            <TextView
-                                android:id="@+id/tvFechaDeNacimiento"
-                                android:layout_width="215dp"
-                                android:layout_height="30dp"
-                                android:layout_marginTop="10dp"
-                                android:hint="@string/formatoFecha"
-                                android:textAlignment="textEnd"
-                                android:gravity="end"
-                                android:textSize="19sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
-                            <ImageButton
-                                android:id="@+id/ibFechaDeNacimiento"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_marginEnd="81dp"
-                                android:layout_marginRight="81dp"
-                                android:contentDescription="@string/app_name"
-                                android:src="@drawable/ic_edit" />
-                        </RelativeLayout>
-
-                <TextView
-                    android:text="@string/género"
-                    android:layout_marginTop="50dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:drawSelectorOnTop="true"
-                    android:entries="@array/genero"
-                    >
-                </Spinner>
-
-                    <TextView
-                        android:text="@string/instrumentoFavorito"
-                        android:layout_marginTop="50dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp" />
-                    <Spinner
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:drawSelectorOnTop="true">
-                    </Spinner>
-
-                    <TextView
-                        android:text="@string/ingreseNivel"
-                        android:layout_marginTop="50dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp" />
-
-                    <Spinner
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:drawSelectorOnTop="true"
-                        android:entries="@array/nivel">
-                    </Spinner>
-
-                    <TextView
-                        android:text="@string/ingreseEstilo"
-                        android:layout_marginTop="50dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp" />
-
-                    <Spinner
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:drawSelectorOnTop="true"
-                        >
-                    </Spinner>
-
-
-
-
-                <TextView
-                android:text="@string/ingreseRegion"
-                android:layout_marginTop="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:drawSelectorOnTop="true"
-                    >
-                </Spinner>
-
-                <TextView
-                    android:text="@string/ingreseComuna"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:drawSelectorOnTop="true">
-                </Spinner>
-
-                <TextView
-                    android:text="@string/disponible"
-                    android:layout_marginTop="50dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:drawSelectorOnTop="true"
-                    android:entries="@array/sino">
-                </Spinner>
-
-
-
-
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
                 <EditText
-                        android:inputType="textPassword"
-                        android:maxLength="15"
-                        android:layout_marginTop="50dp"
-                        android:hint="@string/contraseña"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp" />
+                    android:id="@+id/etAlias"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:hint="@string/alias"/>
 
-                    <EditText
-                        android:inputType="textPassword"
-                        android:maxLength="15"
-                        android:hint="@string/repitaContraseña"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp" />
+                <TextView
+                    android:id="@+id/tvContadorAlias"
+                    android:layout_width="69dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="0/20" />
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="277dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:maxLength="50" />
+
+
+            <TextView
+                android:id="@+id/tvTituloFechaDeNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/fechaNacimiento"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvFechaDeNacimiento"
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="end"
+                    android:hint="@string/formatoFecha"
+                    android:textAlignment="textEnd"
+                    android:textSize="19sp" />
+
+
+                <ImageButton
+                    android:id="@+id/ibFechaDeNacimiento"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="81dp"
+                    android:layout_marginRight="81dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_edit"
+                    android:background="@null"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/género" />
+
+            <Spinner
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/genero"></Spinner>
+
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/instrumentoFavorito" />
+
+            <Spinner
+                android:id="@+id/spInstrumento"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:drawSelectorOnTop="true"
+
+                ></Spinner>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/ingreseNivel" />
+
+            <Spinner
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/nivel"></Spinner>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/ingreseEstilo" />
+
+            <Spinner
+                android:id="@+id/spEstilo"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:drawSelectorOnTop="true"></Spinner>
+
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/ingreseRegion" />
+
+            <Spinner
+                android:id="@+id/spRegion"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:drawSelectorOnTop="true"></Spinner>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/ingreseComuna" />
+
+            <Spinner
+                android:id="@+id/spComuna"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:drawSelectorOnTop="true"></Spinner>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/disponible" />
+
+            <Spinner
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/sino"></Spinner>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp">
+            <EditText
+                android:id="@+id/etAlias"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:inputType="textPassword"
+                android:maxLength="15"
+
+                android:hint="@string/contrasena"
+                 />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_remove_red_eye"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="69dp"
+                    android:background="@null"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+            <EditText
+                android:id="@+id/etAlias"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:hint="@string/repitaContrasena"
+                 />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_remove_red_eye"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="69dp"
+                    android:background="@null"/>
+            </RelativeLayout>
 
             <Button
-                android:text="@string/registrarse"
+                android:id="@+id/etAlias"
+                android:layout_width="277dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:inputType="text"
+                android:text="@string/registrarse" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="250dp">
 
             </LinearLayout>
+
+        </LinearLayout>
 
 
     </ScrollView>
